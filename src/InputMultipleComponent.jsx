@@ -30,7 +30,7 @@ export default function InputMultipleComponent({ input, dispatch }) {
                 {input.getList().map((il, idx) => {
                     return (
                     <div className="flex gap-2">
-                        <input className="border-b-2 p-2 border-gray-200 border-solid focus:outline-0 focus:border-gray-500 hover:cursor-pointer" id={`${input.getId()}_${idx}`} type={input.getType()} placeholder={input.getPlaceholder()} maxLength={input.getMaxLength()} value={il.text} name={`${input.getName()}_${input.getId()}[]`} onChange={(e) => handleChange(e, idx)}></input>
+                        <input className="border-b-2 p-2 border-gray-200 border-solid focus:outline-0 focus:border-gray-500 hover:cursor-pointer" id={`${input.getId()}_${idx}`} type={input.getType()} placeholder={input.getPlaceholder()} maxLength={input.getMaxLength()} value={il.text} name={`${input.getName()}_${input.getId()}`} onChange={(e) => handleChange(e, idx)}></input>
                         <label className="hover:cursor-pointer" htmlFor={`${input.getId()}_${idx}`}>{il.text}</label>
                     </div>
                     )
